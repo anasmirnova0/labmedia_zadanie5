@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5</title>
+    <link rel="stylesheet" href="css/style_zadanie5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__block">
+                <a href="" class="logo"><img src="img/1.png" alt="logo" class="logo__img"></a>
+                <p class="header__text">Текст</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="line">
+            <div class="line__one"></div>
+            <div class="line__two"></div>
+            <div class="line__three"></div>
+        </div> 
+    </div>
+ 
+
+    <section>
+        <div class="container">
+            <div class="kviz" id="block1">
+                <h1 class="main__text">Тестирование</h1>
+                <p class="text">Осталось пройти небольшой тест,  который покажет, как хорошо ты усвоил материал</p>
+                <div class="block__uslovie">
+                    <div class="tabcontent__block">
+                        <p class="tabcontent__line">-</p>
+                        <p class="tabcontent__element">Для успешного прохождения нужно правильно ответить минимум на 7 вопросов из 10</p>
+                    </div>  
+                    <div class="tabcontent__block">
+                        <p class="tabcontent__line">-</p>
+                        <p class="tabcontent__element">На прохождение теста дается 3 попытки</p>
+                    </div>
+                </div>
+                <div class="block__button">
+                    <a class="kviz__button" onclick="showBlock()">Начать &#10230;</a>
+                </div>
+            </div>
+            <div class="kviz vopros__one" id="block2">
+                
+                <form id="quiz">
+                    <div class="question-wrapper">
+                        <h1 class="main__text">Тестирование</h1>
+                        <br>
+                        <button type="submit" class="btn">Принять</button>
+                    </div>
+                    
+                </form>
+                <div class="feedback-wrapper"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script_zadanie5.js"></script>
+    
+
+    <div class="container">
+        <div class="line line__end">
+            <div class="line__four"></div>
+            <div class="line__five"></div>
+        </div> 
+    </div>
+</body>
+</html>
