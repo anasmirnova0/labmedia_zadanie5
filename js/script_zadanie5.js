@@ -7,9 +7,6 @@ function showBlock() {
     document.querySelector('#block2').style.display = 'block';
 };
 
-
-
-
 const quizData = [
     {
       question: "Кто написал роман 'Война и мир'?",
@@ -122,10 +119,34 @@ const quizData = [
   function getSelectedAnswer(index) {
     const questionData = quizData[index];
     const selectedOption = quizForm.elements[`q${index}`].value;
+    if(selectedOption === ""){
+      alert(`Вы пропустили вопрос ${index+1}!`);
+    }
     if (questionData.options[selectedOption].correct) {
       score++;
     }
   }
+
+  function getNextQuestion() {
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+    if (!selectedAnswer) {
+     alert('Пожалуйста, выберите ответ.');
+     return;
+    }
+    const answerText = selectedAnswer.value;
+    const correctAnswer = quizData[currentQuestion].answers.find(answer => answer.correct);
+    if (answerText === correctAnswer.text) {
+     score++;
+    }
+    currentQuestion++;
+    if (currentQuestion >= quizData.length) {
+     quizForm.style.display = 'none';
+     showFeedback();
+    } else {
+     quizQuestions.innerHTML = '';
+     showQuestions();
+    }
+   }
 
   function showFeedback() {
     const totalQuestions = quizData.length;
